@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img id="mainImage" src="https://thumbs.dreamstime.com/b/green-nature-banner-flower-water-drops-black-background-66151915.jpg" />
+    </div>
+
+    <script>
+        var myImage = document.getElementById("mainImage");
+        var imageArray = ["https://thumbs.dreamstime.com/b/green-nature-banner-flower-water-drops-black-background-66151915.jpg", "https://wallpaperaccess.com/full/91909.jpg",
+            "https://wallpaperaccess.com/full/226908.jpg", "https://wallpaperaccess.com/full/1281416.jpg", "https://free4kwallpapers.com/uploads/originals/2016/02/15/burj-khalifa-is-one-of-may-fav-place-wallpaper.jpg"
+        ]
+
+        var imageIndex = 0;
+
+        function changeImage() {
+            myImage.setAttribute("src", imageArray[imageIndex]);
+            imageIndex++;
+            if (imageIndex >= imageArray.length) {
+                imageIndex = 0;
+            }
+        }
+        setInterval(changeImage, 5000);
+    </script>
+</body>
+
+</html>
